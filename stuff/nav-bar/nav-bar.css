@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Syncopate:wght@700&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  line-height: 1.3;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+  letter-spacing: .1rem;
+}
+
+header > div {
+  background: #181818;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  min-width: 890px;
+}
+
+header > div nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  min-height: 8vh;
+}
+
+header > div nav #logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: auto;
+  margin-left: 7rem;
+  font-family: 'Syncopate', sans-serif;
+}
+
+header > div nav #logo img {
+  width: 50px;
+}
+
+header > div nav #logo span {
+  color: white;
+  padding-left: 1rem;
+  letter-spacing: .3rem;
+  font-size: 1.2rem;
+}
+
+header > div nav #nav-links {
+  margin-right: 9rem;
+}
+
+header > div nav #nav-links ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header > div nav #nav-links ul .nav-links {
+  text-decoration: none;
+  color: white;
+  margin-left: 3rem;
+}
+
+header > div nav #nav-buttons ul li {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+header > div nav #nav-buttons .nav-buttons {
+  cursor: pointer;
+  padding: .3em 1em;
+  border: none;
+  border-radius: 15px;
+  color: white;
+}
+
+header > div nav #nav-buttons .primary-btn {
+  background: #4285f4;
+  border: 1px solid #84aef3;
+}
+
+header > div nav #nav-buttons .secondary-btn {
+  background: #4caf4f;
+  border: 1px solid #6edb6e;
+}
+
+#sections {
+  background: #263238;
+  padding-top: 8vh;
+}
+
+#sections .section {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#sections .section:last-child {
+  background: darkslateblue;
+}
+
+#sections h1 {
+  color: white;
+}
+/*# sourceMappingURL=nav-bar.css.map */
