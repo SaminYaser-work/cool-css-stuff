@@ -12,6 +12,8 @@ body {
 
 #wrapper {
 
+    margin-bottom: 5rem;
+
     //unrelated
     #title {
         text-align: center;
@@ -47,6 +49,7 @@ body {
 
         width: 80%;
         margin: 0 auto;
+        margin-bottom: 5rem;
 
         #img-container {
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

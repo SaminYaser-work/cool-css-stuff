@@ -11,6 +11,10 @@ body {
   background: #181818;
 }
 
+#wrapper {
+  margin-bottom: 5rem;
+}
+
 #wrapper #title {
   text-align: center;
   padding: 5rem 0;
@@ -45,6 +49,7 @@ body {
   #wrapper {
     width: 80%;
     margin: 0 auto;
+    margin-bottom: 5rem;
   }
   #wrapper #img-container {
     -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
