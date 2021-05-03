@@ -20,7 +20,7 @@ header {
     position: fixed;
     z-index: 999;
     width: 100%;
-    min-width: 890px;
+    // min-width: 890px;
 
     nav {
       display: flex;
@@ -86,9 +86,14 @@ header {
       }
 
       #nav-buttons {
+        ul {
+          display: flex;
+        }
+
         ul li {
-          display: inline-block;
           margin-right: 1rem;
+          flex: 0 0 auto;
+          list-style: none;
         }
 
         .nav-buttons {
@@ -143,5 +148,23 @@ header {
 
   h1 {
     color: white;
+  }
+}
+
+
+@media (max-width: 1024px) {
+
+
+  header > div nav #logo {
+    margin-left: 1rem;
+  }
+
+  header > div nav #nav-links {
+    width: auto;
+    margin-right: auto;
+  }
+
+  header > div nav #nav-links ul .nav-links{
+    margin-left: 1.5rem;
   }
 }

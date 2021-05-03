@@ -21,7 +21,6 @@ header > div {
   position: fixed;
   z-index: 999;
   width: 100%;
-  min-width: 890px;
 }
 
 header > div nav {
@@ -104,9 +103,18 @@ header > div nav #nav-links ul li a:focus::after {
   outline: none;
 }
 
+header > div nav #nav-buttons ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 header > div nav #nav-buttons ul li {
-  display: inline-block;
   margin-right: 1rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  list-style: none;
 }
 
 header > div nav #nav-buttons .nav-buttons {
@@ -172,5 +180,18 @@ header > div nav #nav-buttons .nav-buttons:focus {
 
 #sections h1 {
   color: white;
+}
+
+@media (max-width: 1024px) {
+  header > div nav #logo {
+    margin-left: 1rem;
+  }
+  header > div nav #nav-links {
+    width: auto;
+    margin-right: auto;
+  }
+  header > div nav #nav-links ul .nav-links {
+    margin-left: 1.5rem;
+  }
 }
 /*# sourceMappingURL=nav-bar.css.map */
