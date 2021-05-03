@@ -1,68 +1,64 @@
 *,
 *::after,
 *::before {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background: #181818;
+  background: #181818;
 }
 
 #wrapper {
+  margin-bottom: 5rem;
 
-    margin-bottom: 5rem;
+  //unrelated
+  #title {
+    text-align: center;
+    padding: 5rem 0;
 
-    //unrelated
-    #title {
-        text-align: center;
-        padding: 5rem 0;
-        
-        h1 {
-            color: white;
-        }
+    h1 {
+      color: white;
+    }
+  }
+
+  #img-container {
+    display: grid;
+    gap: 0.8rem;
+
+    img {
+      //width and height are IMPORTANT!!!
+      width: 100%;
+      height: 100%;
+      border: 2px solid white;
+
+      transition: transform 300ms ease;
     }
 
-    #img-container {
-        display: grid;
-        gap: 0.8rem;
-
-        img {
-            //width and height are IMPORTANT!!!
-            width: 100%;
-            height: 100%;
-            border: 2px solid white;
-
-            transition: transform 300ms ease;
-        }
-
-        img:hover {
-            transform: scale(1.02);
-        }
+    img:hover {
+      transform: scale(1.02);
     }
+  }
 }
 
 @media screen and (min-width: 600px) {
+  #wrapper {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 5rem;
 
-    #wrapper {
+    #img-container {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-auto-flow: dense; //Needed to fill gaps inside gallery
 
-        width: 80%;
-        margin: 0 auto;
-        margin-bottom: 5rem;
+      .long-photo {
+        grid-column: span 2 / auto;
+      }
 
-        #img-container {
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            grid-auto-flow: dense; //Needed to fill gaps inside gallery
-            
-            .long-photo {
-                grid-column: span 2 / auto;
-            }
-
-            .wide-photo {
-                grid-row: span 2 / auto;
-            }
-        }
+      .wide-photo {
+        grid-row: span 2 / auto;
+      }
     }
-    
+  }
 }
