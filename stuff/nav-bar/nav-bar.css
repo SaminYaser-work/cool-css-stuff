@@ -101,6 +101,7 @@ header > div nav #nav-links ul li a:hover::after,
 header > div nav #nav-links ul li a:focus::after {
   -webkit-transform: scale(1);
           transform: scale(1);
+  outline: none;
 }
 
 header > div nav #nav-buttons ul li {
@@ -115,6 +116,13 @@ header > div nav #nav-buttons .nav-buttons {
   border-radius: 30px;
   color: white;
   font-size: 1.1rem;
+  font-weight: bold;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0px 5px 15px;
+          box-shadow: rgba(255, 255, 255, 0.1) 0px 5px 15px;
+  -webkit-transition: -webkit-box-shadow, -webkit-transform 300ms ease;
+  transition: -webkit-box-shadow, -webkit-transform 300ms ease;
+  transition: box-shadow, transform 300ms ease;
+  transition: box-shadow, transform 300ms ease, -webkit-box-shadow, -webkit-transform 300ms ease;
 }
 
 header > div nav #nav-buttons .primary-btn {
@@ -125,6 +133,15 @@ header > div nav #nav-buttons .primary-btn {
 header > div nav #nav-buttons .secondary-btn {
   background: #28a745;
   border: 1px solid #28a745;
+}
+
+header > div nav #nav-buttons .nav-buttons:hover,
+header > div nav #nav-buttons .nav-buttons:focus {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: rgba(255, 255, 255, 0.35) 0px 0px 15px;
+          box-shadow: rgba(255, 255, 255, 0.35) 0px 0px 15px;
+  outline: none;
 }
 
 #sections {
