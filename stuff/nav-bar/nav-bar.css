@@ -97,7 +97,8 @@ header > div nav #nav-links ul li a::after {
   transition: transform 300ms ease, -webkit-transform 300ms ease;
 }
 
-header > div nav #nav-links ul li a:hover::after {
+header > div nav #nav-links ul li a:hover::after,
+header > div nav #nav-links ul li a:focus::after {
   -webkit-transform: scale(1);
           transform: scale(1);
 }
@@ -109,20 +110,21 @@ header > div nav #nav-buttons ul li {
 
 header > div nav #nav-buttons .nav-buttons {
   cursor: pointer;
-  padding: 0.3em 1em;
+  padding: 0.6rem 1.8rem;
   border: none;
-  border-radius: 15px;
+  border-radius: 30px;
   color: white;
+  font-size: 1.1rem;
 }
 
 header > div nav #nav-buttons .primary-btn {
-  background: #4285f4;
-  border: 1px solid #0f67f5;
+  background: #3e64ff;
+  border: 1px solid #3e64ff;
 }
 
 header > div nav #nav-buttons .secondary-btn {
-  background: #4caf4f;
-  border: 1px solid #0b8a0b;
+  background: #28a745;
+  border: 1px solid #28a745;
 }
 
 #sections {
