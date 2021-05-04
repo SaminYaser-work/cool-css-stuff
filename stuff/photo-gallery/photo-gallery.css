@@ -45,7 +45,7 @@ body {
           transform: scale(1.02);
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
   #wrapper {
     width: 80%;
     margin: 0 auto;
