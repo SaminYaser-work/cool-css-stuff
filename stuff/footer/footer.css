@@ -92,6 +92,33 @@ body {
 
 #wrapper footer #footer-content #footer1 li {
   list-style: none;
+  overflow: hidden;
+}
+
+#wrapper footer #footer-content #footer1 a {
+  position: relative;
+}
+
+#wrapper footer #footer-content #footer1 a::after {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 1px;
+  background: white;
+  top: 100%;
+  left: 0%;
+  translate: -50%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 300ms ease;
+  transition: -webkit-transform 300ms ease;
+  transition: transform 300ms ease;
+  transition: transform 300ms ease, -webkit-transform 300ms ease;
+}
+
+#wrapper footer #footer-content #footer1 a:hover::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 #wrapper footer #footer-content #country-select {
