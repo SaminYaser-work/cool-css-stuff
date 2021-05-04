@@ -137,11 +137,60 @@ body {
 }
 
 #wrapper footer #footer-content #footer2 #newsletter p {
-  margin: 0.2rem 0;
+  margin-top: 0.4rem;
+  margin-bottom: .6rem;
 }
 
 #wrapper footer #footer-content #footer2 #newsletter form {
   margin-bottom: 0.2rem;
+}
+
+#wrapper footer #footer-content #footer2 #newsletter form * {
+  margin: .2rem 0;
+}
+
+#wrapper footer #footer-content #footer2 #newsletter form input[type='checkbox'] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  height: 1.3rem;
+  width: 1.3rem;
+  color: #1c2956;
+  outline: none;
+  border: 1px solid #f7ded8;
+  cursor: pointer;
+}
+
+#wrapper footer #footer-content #footer2 #newsletter form input[type='checkbox']:hover {
+  background: #4d6091;
+}
+
+#wrapper footer #footer-content #footer2 #newsletter form input[type='checkbox']::after {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f00c';
+  height: 1.2rem;
+  width: 1.2rem;
+  color: black;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  visibility: hidden;
+}
+
+#wrapper footer #footer-content #footer2 #newsletter form input[type='checkbox']:checked {
+  background: white;
+}
+
+#wrapper footer #footer-content #footer2 #newsletter form input[type='checkbox']:checked::after {
+  visibility: visible;
 }
 
 #wrapper footer #footer-content #footer2 #newsletter form div:nth-child(3) {
