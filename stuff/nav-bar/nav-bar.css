@@ -177,10 +177,8 @@ header > div nav #nav-buttons .nav-buttons {
   font-weight: bold;
   -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0px 5px 15px;
           box-shadow: rgba(255, 255, 255, 0.1) 0px 5px 15px;
-  -webkit-transition: -webkit-box-shadow, -webkit-transform 300ms ease;
-  transition: -webkit-box-shadow, -webkit-transform 300ms ease;
-  transition: box-shadow, transform 300ms ease;
-  transition: box-shadow, transform 300ms ease, -webkit-box-shadow, -webkit-transform 300ms ease;
+  -webkit-transition: color 500ms linear;
+  transition: color 500ms linear;
 }
 
 header > div nav #nav-buttons .primary-btn {
@@ -195,10 +193,8 @@ header > div nav #nav-buttons .secondary-btn {
 
 header > div nav #nav-buttons .nav-buttons:hover,
 header > div nav #nav-buttons .nav-buttons:focus {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-box-shadow: rgba(255, 255, 255, 0.35) 0px 0px 15px;
-          box-shadow: rgba(255, 255, 255, 0.35) 0px 0px 15px;
+  background: #f1f1f1;
+  color: black;
   outline: none;
 }
 
