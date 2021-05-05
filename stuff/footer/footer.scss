@@ -1,5 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Girassol&display=swap");
+
+
 
 *,
 *::after,
@@ -21,11 +23,18 @@ body {
 }
 
 .footer-font-bold {
-  font-family: "Playfair Display", serif;
+  font-family: 'Girassol', sans-serif;
   font-weight: bold;
   color: white;
   line-height: 1.2;
   text-transform: uppercase;
+}
+
+.footer-font-normal {
+  font-family: 'Girassol', sans-serif;
+  font-weight: normal;
+  line-height: 1.2;
+  color: white;
 }
 
 .footer-links {
@@ -58,7 +67,7 @@ body {
   footer {
     margin-top: auto; //pushes the footer down
     background: #223874;
-    color: white;
+    // color: white;
 
     #footer-content {
       display: flex;
@@ -212,4 +221,89 @@ body {
       }
     }
   }
+}
+
+
+@media (min-width: 900px) {
+
+  .separator-mobile {
+    display: none;
+  }
+
+
+  #wrapper {
+    footer {
+
+      #footer-content {
+        max-width: 900px;
+        margin: 0 auto;
+        display: grid;
+        // grid-template-columns: 1fr 1fr;
+        gap: 0 3rem;
+        grid-template-areas: 
+        "footer1 country-select"
+        "main-separator main-separator"
+        "footer2 footer2";
+
+        #footer1 {
+          grid-area: footer1;
+          display: flex;
+          justify-content: space-around;
+          align-items: flex-start;
+          // margin-left: auto;
+          margin-right: auto;
+        }
+
+        #country-select {
+          grid-area: country-select;
+          margin-top: 1.4rem;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          margin-left: auto;
+          // margin-right: auto;
+
+          p {
+            margin-bottom: 1rem;
+          }
+        }
+
+        #main-separator {
+          grid-area: main-separator;
+        }
+
+        #footer2 {
+          grid-area: footer2;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 0 3rem;
+          grid-template-areas: 
+          "socials newsletter"
+          "copyright newsletter";
+
+          #socials {
+            grid-area: socials;
+            // margin: 0 auto;
+            margin-right: auto;
+          }
+
+          #copy {
+            grid-area: copyright;
+            // margin: 0 auto;
+            margin-right: auto;
+          }
+
+          #newsletter {
+            grid-area: newsletter;
+            // margin: 0 auto;
+            margin-left: auto;
+
+            
+          }
+        }
+      }
+    }
+  }
+  
 }

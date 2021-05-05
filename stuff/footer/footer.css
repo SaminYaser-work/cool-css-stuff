@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Girassol&display=swap");
 *,
 *::after,
 *::before {
@@ -21,11 +21,18 @@ body {
 }
 
 .footer-font-bold {
-  font-family: "Playfair Display", serif;
+  font-family: 'Girassol', sans-serif;
   font-weight: bold;
   color: white;
   line-height: 1.2;
   text-transform: uppercase;
+}
+
+.footer-font-normal {
+  font-family: 'Girassol', sans-serif;
+  font-weight: normal;
+  line-height: 1.2;
+  color: white;
 }
 
 .footer-links {
@@ -65,7 +72,6 @@ body {
 #wrapper footer {
   margin-top: auto;
   background: #223874;
-  color: white;
 }
 
 #wrapper footer #footer-content {
@@ -240,5 +246,93 @@ body {
 #wrapper footer #footer-content #footer2 #socials #footer-icons a i:hover {
   background: white;
   color: black;
+}
+
+@media (min-width: 900px) {
+  .separator-mobile {
+    display: none;
+  }
+  #wrapper footer #footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: -ms-grid;
+    display: grid;
+    gap: 0 3rem;
+        grid-template-areas: "footer1 country-select" "main-separator main-separator" "footer2 footer2";
+  }
+  #wrapper footer #footer-content #footer1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: footer1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-right: auto;
+  }
+  #wrapper footer #footer-content #country-select {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: country-select;
+    margin-top: 1.4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-left: auto;
+  }
+  #wrapper footer #footer-content #country-select p {
+    margin-bottom: 1rem;
+  }
+  #wrapper footer #footer-content #main-separator {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: main-separator;
+  }
+  #wrapper footer #footer-content #footer2 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: footer2;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 0 3rem;
+        grid-template-areas: "socials newsletter" "copyright newsletter";
+  }
+  #wrapper footer #footer-content #footer2 #socials {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: socials;
+    margin-right: auto;
+  }
+  #wrapper footer #footer-content #footer2 #copy {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: copyright;
+    margin-right: auto;
+  }
+  #wrapper footer #footer-content #footer2 #newsletter {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 2;
+    grid-area: newsletter;
+    margin-left: auto;
+  }
 }
 /*# sourceMappingURL=footer.css.map */
